@@ -17,3 +17,15 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.btn {
+  margin-top: 30px;
+  height: 7rem !important;
+  width: 6rem;
+  border-radius: 40px;
+}
+
+.btnimg {
+  font-weight: bolder;
+  font-size: 0.7rem;
+}
