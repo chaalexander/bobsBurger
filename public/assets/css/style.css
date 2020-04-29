@@ -1,31 +1,37 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
-
 .btn {
   margin-top: 30px;
   height: 7rem !important;
   width: 6rem;
   border-radius: 40px;
 }
-
-.btnimg {
+img {
+  height: 2.5rem;
+  width: 3rem;
+}
+.add {
   font-weight: bolder;
   font-size: 0.7rem;
+}
+
+.header {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: solid 4px black;
+}
+.eat {
+  border: solid 4px black;
+  text-align: center;
+}
+.addBurger {
+  text-align: center;
+  border: solid 4px black;
+  min-width: 325px;
+}
+.devoured {
+  border: solid 4px black;
+  text-align: center;
 }

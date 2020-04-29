@@ -2,7 +2,7 @@
 	{{burger_name}}
 
 	<button class="change-devoured" data-id="{{id}}" data-newsburger="{{devoured}}">
-		{{#if sleep}}EATING TIME{{else}}DEVOURED{{/if}}
+		{{#if devoured}}DEVOURED{{else}}EAT{{/if}}
 	</button>
 
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>

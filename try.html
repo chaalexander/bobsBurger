@@ -17,21 +17,10 @@
     {{{ body }}}
   </body>
 
-  <h1 class="header" style="text-align: center;">WELCOME TO BOB'S BURGER!</h1>
+  <h1 class="header">WELCOME TO BOB'S BURGER!</h1>
 
-  <div
-    class="container"
-    style="
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      border: solid 4px black;
-    "
-  >
-    <div
-      class="container eat"
-      style="border: solid 4px black; text-align: center;"
-    >
+  <div class="container">
+    <div class="eat">
       <h2>Burgers to eat!</h2>
 
       <ul>
@@ -40,10 +29,7 @@
       </ul>
     </div>
 
-    <div
-      class="container addBurger"
-      style="text-align: center; border: solid 4px black; min-width: 325px;"
-    >
+    <div class="addBurger">
       <h2>Add a burger</h2>
       <form class="create-form">
         <div class="form-group">
@@ -58,19 +44,13 @@
         </div>
 
         <button class="btn" type="submit">
-          <p class="btnimg">ADD NEW</p>
-          <img
-            style="height: 2.5rem; width: 3rem;"
-            src="public/assets/image/icon.png"
-          />
+          <p class="add">ADD NEW</p>
+          <img src="public/assets/image/icon.png" />
         </button>
       </form>
     </div>
 
-    <div
-      class="container devoured"
-      style="border: solid 4px black; text-align: center;"
-    >
+    <div class="devoured">
       <h2>Burgers devoured!</h2>
 
       <ul>
