@@ -17,43 +17,66 @@
     {{{ body }}}
   </body>
 
-  <h1 style="text-align: center;">WELCOME TO BOB'S BURGER!</h1>
+  <h1 class="header" style="text-align: center;">WELCOME TO BOB'S BURGER!</h1>
 
-  <h2 style="text-align: left;">Burgers to eat!</h2>
+  <div
+    class="container"
+    style="
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      border: solid 4px black;
+    "
+  >
+    <div
+      class="container eat"
+      style="border: solid 4px black; text-align: center;"
+    >
+      <h2>Burgers to eat!</h2>
 
-  <ul style="text-align: left;">
-    {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}}
-    {{/unless}} {{/each}}
-  </ul>
+      <ul>
+        {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}}
+        {{/unless}} {{/each}}
+      </ul>
+    </div>
 
-  <h2 style="text-align: right;">Burgers devoured!</h2>
+    <div
+      class="container addBurger"
+      style="text-align: center; border: solid 4px black; min-width: 325px;"
+    >
+      <h2>Add a burger</h2>
+      <form class="create-form">
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name" />
+        </div>
 
-  <ul style="text-align: right;">
-    {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}}
-    {{/each}}
-  </ul>
+        <div class="form-group">
+          <label for="sleepy">Sleepy?</label><br />
+          <input type="radio" name="sleepy" value="1" checked /> Sleepy!<br />
+          <input type="radio" name="sleepy" value="0" /> Awake
+        </div>
 
-  <div class="container;" style="text-align: center;">
-    <h2>Add a burger</h2>
-    <form class="create-form">
-      <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="name" />
-      </div>
+        <button class="btn" type="submit">
+          <p class="btnimg">ADD NEW</p>
+          <img
+            style="height: 2.5rem; width: 3rem;"
+            src="public/assets/image/icon.png"
+          />
+        </button>
+      </form>
+    </div>
 
-      <div class="form-group">
-        <label for="sleepy">Sleepy?</label><br />
-        <input type="radio" name="sleepy" value="1" checked /> Sleepy!<br />
-        <input type="radio" name="sleepy" value="0" /> Awake
-      </div>
+    <div
+      class="container devoured"
+      style="border: solid 4px black; text-align: center;"
+    >
+      <h2>Burgers devoured!</h2>
 
-      <button class="btn" type="submit">
-        <p class="btnimg">ADD NEW</p>
-        <img
-          style="height: 2.5rem; width: 3rem;"
-          src="public/assets/image/icon.png"
-        />
-      </button>
-    </form>
+      <ul>
+        {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </html>
