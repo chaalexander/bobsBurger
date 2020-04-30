@@ -1,7 +1,10 @@
 body {
   background-image: url("/assets/image/background.png");
 }
-
+.name {
+  margin-top: 20px;
+  width: 40rem;
+}
 .btn {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -9,7 +12,7 @@ body {
   width: 6rem;
   border-radius: 40px;
 }
-img {
+.icon {
   height: 2.5rem;
   width: 3rem;
 }
@@ -18,25 +21,37 @@ img {
   font-size: 0.7rem;
 }
 
-.header {
+header {
   text-align: center;
 }
 .container {
+  margin-top: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   border: solid 4px black;
 }
-.eat {
+.eat,
+.devoured {
   border: solid 4px black;
   text-align: center;
+  background-color: gold;
+  border-radius: 40px;
 }
 .addBurger {
   text-align: center;
   border: solid 4px black;
   min-width: 325px;
+  background-color: gold;
+  border-radius: 70px;
 }
-.devoured {
-  border: solid 4px black;
-  text-align: center;
+
+li,
+.form-group {
+  font-size: 20px;
+  margin: 12px;
+}
+
+h2 {
+  font-size: 30px;
 }
