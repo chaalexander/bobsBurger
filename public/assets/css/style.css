@@ -1,3 +1,7 @@
+body {
+  background-image: url("/assets/image/background.png");
+}
+
 .btn {
   margin-top: 30px;
   height: 7rem !important;

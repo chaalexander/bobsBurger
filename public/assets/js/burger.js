@@ -19,16 +19,16 @@ $(function () {
     });
   });
 
-  $(".create-form").on("submit", function (event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+  $(".create-form").on("submit", function (e) {
+    console.log("you click me");
+
+    e.preventDefault();
 
     var newBurger = {
       name: $("#burger").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim(),
     };
 
-    // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
@@ -38,7 +38,8 @@ $(function () {
     });
   });
 
-  $(".delete-burger").on("click", function (event) {
+  $(".delete-burger").on("click", function (e) {
+    console.log("you click me");
     var id = $(this).data("id");
 
     // Send the DELETE request.

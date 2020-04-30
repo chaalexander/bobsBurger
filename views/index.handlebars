@@ -5,7 +5,7 @@
     <h2>Burgers to eat!</h2>
 
     <ul>
-      {{#each burger}} {{#unless devoured}} {{> burgers/burgers-block eat=true}}
+      {{#each burgers}} {{#unless devoured}} {{> burgers/burgers-block eat=true}}
       {{/unless}} {{/each}}
     </ul>
   </div>
@@ -26,7 +26,7 @@
 
       <button class="btn" type="submit">
         <p class="add">ADD NEW</p>
-        <img src="public/assets/image/icon.png" />
+        <img src="/assets/image/icon.png" />
       </button>
     </form>
   </div>
@@ -35,7 +35,7 @@
     <h2>Burgers devoured!</h2>
 
     <ul>
-      {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block sleep=false}} {{/if}}
+      {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block eat=false}} {{/if}}
       {{/each}}
     </ul>
   </div>
