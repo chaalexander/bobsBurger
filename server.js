@@ -1,6 +1,5 @@
-
 var express = require("express");
-// const CFonts = require("cfonts");
+const CFonts = require("cfonts");
 
 var PORT = process.env.PORT || 7000;
 
@@ -30,17 +29,17 @@ app.listen(PORT, function () {
   console.log("Server listening on: http://localhost:" + PORT);
 });
 
-// CFonts.say("WELCOME TO BOB'S BURGER", {
-//   font: "chrome",
-//   align: "center",
-//   colors: ["candy", "cyan", "candy"],
-//   background: "transparent",
-//   letterSpacing: 1,
-//   lineHeight: 1,
-//   space: true,
-//   maxLength: "0",
-//   gradient: true,
-//   independentGradient: false,
-//   transitionGradient: false,
-//   env: "node",
-// });
+CFonts.say("WELCOME TO BOB'S BURGER", {
+  font: "chrome",
+  align: "center",
+  colors: ["candy", "cyan", "candy"],
+  background: "transparent",
+  letterSpacing: 1,
+  lineHeight: 1,
+  space: true,
+  maxLength: "0",
+  gradient: true,
+  independentGradient: false,
+  transitionGradient: false,
+  env: "node",
+});

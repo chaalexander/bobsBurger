@@ -1,20 +1,21 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
   $(".change-devoured").on("click", function (event) {
+    console.log("you click me");
     var id = $(this).data("id");
-    var newBurger = $(this).data("newburger");
+    var newDevoured = $(this).data("newdevoured");
 
-    var newBurgerState = {
-      devoured: newBurger,
+    var newDevouredState = {
+      devoured: newDevoured,
     };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newBurgerState,
+      data: newDevouredState,
     }).then(function () {
-      console.log("changed eat to", newBurger);
-      // Reload the page to get the updated list
+      console.log("changed eat to", newDevoured);
+     
       location.reload();
     });
   });
@@ -25,7 +26,7 @@ $(function () {
     e.preventDefault();
 
     var newBurger = {
-      name: $("#burger").val().trim(),
+      name: $("#ca").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim(),
     };
 

@@ -3,7 +3,8 @@ body {
 }
 
 .btn {
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   height: 7rem !important;
   width: 6rem;
   border-radius: 40px;
