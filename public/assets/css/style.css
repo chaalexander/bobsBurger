@@ -4,7 +4,7 @@ html {
   margin: 0px;
   background-image: url("/assets/image/test.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: round;
   background-size: cover;
 }
 .name {
@@ -81,4 +81,31 @@ h2 {
 
 h5 {
   margin: 10px;
+}
+/* media queries for about */
+@media screen and (max-width: 989px) {
+  body,
+  html {
+    background-image: url("/assets/image/background.png");
+    height: 100%;
+    margin: 0px;
+    background-position: center;
+    background-repeat: inherit;
+    background-size: auto;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    border: solid 4px black;
+  }
+  .addBurger {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+  .form-group {
+    font-size: 35px !important;
+  }
 }
