@@ -35,25 +35,27 @@ header {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  border: solid 4px black;
+  /* border: solid 4px red; */
 }
 .eat,
 .devoured {
-  border: solid 4px black;
+  border: solid 10px #d23;
+  border-style: ridge;
   text-align: center;
   background-color: gold;
-  border-radius: 40px;
+  /* border-radius: 40px; */
 }
 
 .addBurger {
   text-align: center;
-  border: solid 4px black;
+  border: solid 10px #d23;
+  border-style: ridge;
   background-color: gold;
-  border-radius: 70px;
+  /* border-radius: 70px; */
   width: 300px;
 }
 .burger {
-  margin-top: 0;
+  margin-top: 5px;
   text-align: center;
   margin-bottom: 50px;
 }
