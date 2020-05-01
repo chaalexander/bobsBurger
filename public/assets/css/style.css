@@ -1,5 +1,11 @@
-body {
-  background-image: url("/assets/image/background.png");
+body,
+html {
+  height: 100%;
+  margin: 0px;
+  background-image: url("/assets/image/test.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .name {
   margin-top: 20px;
@@ -27,7 +33,7 @@ header {
 .container {
   margin-top: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   border: solid 4px black;
 }
@@ -38,12 +44,18 @@ header {
   background-color: gold;
   border-radius: 40px;
 }
+
 .addBurger {
   text-align: center;
   border: solid 4px black;
-  min-width: 325px;
   background-color: gold;
   border-radius: 70px;
+  width: 300px;
+}
+.burger {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 li,
@@ -54,4 +66,19 @@ li,
 
 h2 {
   font-size: 30px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gold;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h5 {
+  margin: 10px;
 }
