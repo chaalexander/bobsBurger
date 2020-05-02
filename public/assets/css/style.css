@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("/assets/fonts/font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MyWebFont2";
+  src: url("/assets/fonts/font2.ttf") format("truetype");
+}
+
 body,
 html {
   height: 100%;
@@ -67,6 +76,8 @@ li,
 }
 
 h2 {
+  font-family: "MyWebFont2";
+  color: #d23;
   font-size: 30px;
 }
 
@@ -84,6 +95,7 @@ h2 {
 h5 {
   margin: 10px;
 }
+
 /* media queries for about */
 @media screen and (max-width: 989px) {
   body,
