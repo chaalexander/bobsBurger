@@ -11,17 +11,6 @@
   </div>
 
 
-
-  <div class="devoured">
-    <h2>Burgers devoured!</h2>
-
-    <ul>
-      {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block devoured=false}} {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
-<div class="container burger">
   <div class="addBurger">
     <h2 class="addB">Add a burger</h2>
     <form class="create-form">
@@ -32,7 +21,7 @@
 
       <div class="form-group">
 
-        <input type="radio" name="devoured" value="1" checked /> Devoured!<br />
+        <input type="radio" name="devoured" value="1" checked /> Devoured!<br/>
         <input type="radio" name="devoured" value="0" /> Eat!
       </div>
 
@@ -42,7 +31,18 @@
       </button>
     </form>
   </div>
+
+
+  <div class="devoured">
+    <h2>Burgers devoured!</h2>
+
+    <ul>
+      {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block devoured=false}} {{/if}}
+      {{/each}}
+    </ul>
+  </div>
 </div>
+
 <div class=footer>
   <h5>
     <i class="far fa-copyright"></i> Cha Alexander
