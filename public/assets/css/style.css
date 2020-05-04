@@ -68,6 +68,9 @@ header {
   text-align: center;
   margin-bottom: 50px;
 }
+ul {
+  list-style-type: none;
+}
 
 li,
 .form-group {
