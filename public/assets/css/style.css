@@ -53,6 +53,7 @@ header {
   border-style: ridge;
   text-align: center;
   background-color: gold;
+  max-height: fit-content;
 }
 
 .addBurger {
@@ -60,8 +61,8 @@ header {
   border: solid 10px #d23;
   border-style: ridge;
   background-color: gold;
-
   width: 300px;
+  max-height: fit-content;
 }
 
 ul {
