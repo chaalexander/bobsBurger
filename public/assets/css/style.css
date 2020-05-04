@@ -120,22 +120,20 @@ h5 {
     height: 100%;
     margin: 0px;
     background-position: center;
-    background-repeat: inherit;
+    background-repeat: repeat;
     background-size: auto;
   }
 
-  .container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    border: solid 4px black;
-  }
   .addBurger {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
+    margin: 35px;
   }
+
   .form-group {
     font-size: 35px !important;
+  }
+
+  .del {
+    width: 40px;
+    height: 40px;
   }
 }
