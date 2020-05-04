@@ -111,6 +111,14 @@ h5 {
 }
 
 /* Portuguese-Brazil mode */
+.flag {
+  text-align: end;
+  margin-top: 150px;
+}
+.br {
+  width: 60px;
+  height: 60px;
+}
 
 /* media queries for about */
 @media screen and (max-width: 989px) {
