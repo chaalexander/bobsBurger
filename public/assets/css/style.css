@@ -17,12 +17,15 @@ html {
   margin-top: 20px;
   width: 40rem;
 }
+
 .btn {
   margin-top: 15px;
   margin-bottom: 15px;
   height: 7rem !important;
-  width: 6rem;
-  border-radius: 40px;
+  width: 4.5rem;
+  border-radius: 60px;
+  border: solid 2px #d23;
+  background-color: gold;
 }
 
 .del {
