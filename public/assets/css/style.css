@@ -25,7 +25,7 @@ html {
   width: 4.5rem;
   border-radius: 60px;
   border: solid 2px #d23;
-  background-color: gold;
+  background-color: #fec;
 }
 
 .del {
@@ -52,7 +52,7 @@ header {
 }
 .change-devoured {
   border: solid 2px #d23;
-  background-color: gold;
+  background-color: #fec;
   border-radius: 10px;
 }
 
@@ -115,7 +115,8 @@ h5 {
   text-align: end;
   margin-top: 150px;
 }
-.br {
+#br,
+#us {
   width: 60px;
   height: 60px;
 }

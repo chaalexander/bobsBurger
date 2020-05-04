@@ -15,7 +15,7 @@ $(function () {
       data: newDevouredState,
     }).then(function () {
       console.log("changed eat to", newDevoured);
-     
+
       location.reload();
     });
   });
@@ -52,4 +52,12 @@ $(function () {
       location.reload();
     });
   });
+});
+
+$("#br").on("click", function () {
+  console.log("you click me");
+});
+
+$("#us").on("click", function () {
+  console.log("you click me");
 });
