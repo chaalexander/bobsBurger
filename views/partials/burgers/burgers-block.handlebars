@@ -2,8 +2,8 @@
 	{{burger_name}}
 
 	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}<img class="del" src="/assets/image/eat.png">{{else}}UN-EAT{{/if}}
+		{{#if devoured}}<img class="del" src="/assets/image/eat.png" alt="burger bite"> DEVOUR!{{else}}UN-EAT{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}"><img class="del" src="/assets/image/delete.png"></button>
+	<img class="del delete-burger" src="/assets/image/delete.png" alt="trash can" data-id="{{this.id}}">
 </li>

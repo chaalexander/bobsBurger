@@ -47,6 +47,17 @@ header {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.change-devoured {
+  border: solid 2px #d23;
+  background-color: gold;
+  border-radius: 10px;
+}
+
+.del {
+  width: 20px;
+  height: 20px;
+}
+
 .eat,
 .devoured {
   border: solid 10px #d23;
