@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+
 $(function () {
   $(".change-devoured").on("click", function (event) {
     console.log("you click me");
@@ -9,7 +9,7 @@ $(function () {
       devoured: newDevoured,
     };
 
-    // Send the PUT request.
+   
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState,
@@ -43,21 +43,22 @@ $(function () {
     console.log("you click me");
     var id = $(this).data("id");
 
-    // Send the DELETE request.
     $.ajax("/api/burgers/" + id, {
       type: "DELETE",
     }).then(function () {
       console.log("deleted burger", id);
-      // Reload the page to get the updated list
+
       location.reload();
     });
   });
 });
 
 $("#br").on("click", function () {
+  // location.reload;
   console.log("you click me");
 });
 
 $("#us").on("click", function () {
+  // location.reload;
   console.log("you click me");
 });
