@@ -1,4 +1,5 @@
 const express = require("express");
+const translate = require("translate");
 
 const router = express.Router();
 
@@ -26,7 +27,13 @@ router.get("/indexBR", (req, res) => {
 });
 
 router.post("/api/burgers", async (req, res) => {
-  await burgers.create(
+  const foo = await translate(req.body.name, {
+    to: "pt",
+    engine: "google",
+    key: process.env.KEY,
+  });
+  console.log(foo);
+  burgers.create(
     ["burger_name", "devoured"],
     [req.body.name, req.body.devoured],
     (result) => {
@@ -35,10 +42,12 @@ router.post("/api/burgers", async (req, res) => {
   );
 });
 
-router.put("/api/burgers/:id", async (req, res) => {
+router.put("/api/burgers/:id", (req, res) => {
   const condition = "id = " + req.params.id;
 
-  await burgers.update(
+  console.log("condition", condition);
+
+  burgers.update(
     {
       devoured: req.body.devoured,
     },
@@ -53,10 +62,10 @@ router.put("/api/burgers/:id", async (req, res) => {
   );
 });
 
-router.delete("/api/burgers/:id", async (req, res) => {
+router.delete("/api/burgers/:id", (req, res) => {
   const condition = "id = " + req.params.id;
 
-  await burgers.delete(condition, (result) => {
+  burgers.delete(condition, (result) => {
     if (result.affectedRows == 0) {
       return res.status(404).end();
     } else {
