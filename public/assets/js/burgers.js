@@ -1,4 +1,3 @@
-
 $(function () {
   $(".change-devoured").on("click", function (event) {
     console.log("you click me");
@@ -9,7 +8,6 @@ $(function () {
       devoured: newDevoured,
     };
 
-   
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState,
@@ -51,14 +49,17 @@ $(function () {
       location.reload();
     });
   });
-});
 
-$("#br").on("click", function () {
-  // location.reload;
-  console.log("you click me");
-});
+  // click handle to send the page to portuguese
+  $("#br").on("click", function () {
+    location.replace("/indexBR");
+    console.log("you click me");
+  });
 
-$("#us").on("click", function () {
-  // location.reload;
-  console.log("you click me");
+  // click handle to go back to the english page
+  $("#us").on("click", function () {
+    location.replace("/");
+
+    console.log("you click me");
+  });
 });

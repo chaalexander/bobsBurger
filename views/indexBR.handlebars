@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="eat">
-        <h2>Sanduiche que quero comer!</h2>
+        <h2>Quero comer!</h2>
 
         <ul>
             {{#each burgers}} {{#unless devoured}} {{> burgers/burgers-block devoured=true}}
@@ -42,11 +42,14 @@
         </ul>
     </div>
 </div>
+
 <div class="flag">
-
-    <img id="us" src="/assets/image/en.png" alt="brazilian flag" type="submit">
-
+    <button id="us" type="submit">
+        <p class="add">Para Ingles</p>
+        <img class="us" src="/assets/image/en.png" alt="us flag">
+    </button>
 </div>
+
 <div class=footer>
     <h5>
         <i class="far fa-copyright"></i> Cha Alexander
