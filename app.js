@@ -12,6 +12,7 @@ app.use(express.json());
 
 var exphbs = require("express-handlebars");
 
+// add a if else statment so i dont have two pages server anmd app.
 app.engine("handlebars", exphbs({ defaultLayout: "mainBR" }));
 app.set("view engine", "handlebars");
 

@@ -9,8 +9,18 @@ router.get("/", (req, res) => {
     const hbsObject = {
       burgers: data,
     };
-  
+
     res.render("index", hbsObject);
+  });
+});
+// router for the portuguese page
+router.get("/indexBR", (req, res) => {
+  burgers.all((data) => {
+    const hbsObject = {
+      burgers: data,
+    };
+
+    res.render("indexBR", hbsObject);
   });
 });
 

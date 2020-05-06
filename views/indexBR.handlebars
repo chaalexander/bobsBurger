@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="eat">
-        <h2>Burgers que quero comer!</h2>
+        <h2>Sanduiche que quero comer!</h2>
 
         <ul>
             {{#each burgers}} {{#unless devoured}} {{> burgers/burgers-block devoured=true}}
@@ -12,10 +12,10 @@
 
 
     <div class="addBurger">
-        <h2 class="addB">Adicione um Burger</h2>
+        <h2 class="addB">Adicione um Sanduiche</h2>
         <form class="create-form">
             <div class="form-group">
-                <label for="ca">Nome do Burger:</label>
+                <label for="ca">Nome do Sanduiche:</label>
                 <input type="text" id="ca" name="burger_name" />
             </div>
 
@@ -43,7 +43,7 @@
     </div>
 </div>
 <div class="flag">
-    <img id="br" src="/assets/image/pt.png" alt="brazilian flag" type="submit">
+
     <img id="us" src="/assets/image/en.png" alt="brazilian flag" type="submit">
 
 </div>

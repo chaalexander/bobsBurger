@@ -112,9 +112,9 @@ h5 {
 
 /* Portuguese-Brazil mode */
 .flag {
-  text-align: end;
-  margin-top: 150px;
+  text-align: center;
 }
+
 #br,
 #us {
   width: 60px;
