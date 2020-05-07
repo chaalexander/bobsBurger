@@ -138,10 +138,13 @@ h5 {
     background-size: auto;
   }
   .container {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
   .addBurger {
     margin: 35px;
+  }
+  .devoured {
+    margin-top: 20px;
   }
 
   .form-group {
