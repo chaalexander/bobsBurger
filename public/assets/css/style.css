@@ -13,6 +13,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .name {
   margin-top: 20px;
   width: 40rem;
@@ -121,6 +122,15 @@ h5 {
   height: 60px;
 }
 
+#br,
+#us {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: gold;
+  border: solid 4px #d23;
+  border-style: ridge;
+}
+
 /* media queries for about */
 @media screen and (max-width: 989px) {
   body,
@@ -144,5 +154,10 @@ h5 {
   .del {
     width: 40px;
     height: 40px;
+  }
+  #br,
+  #us {
+    margin-top: 20px;
+    margin-bottom: 60px;
   }
 }
