@@ -3,37 +3,28 @@ const translate = require("translate");
 
 const router = express.Router();
 
-const burgers = require("../models/burgers.js");
+const burgersbr = require("../models/burgersbr.js");
 
 router.get("/", (req, res) => {
-  burgers.all((data) => {
+  burgersbr.all((data) => {
     const hbsObject = {
       burgers: data,
     };
 
-    res.render("index", hbsObject);
+    res.render("indexbr", hbsObject);
   });
 });
 
-// router for the portuguese page
-router.get("/indexBR", (req, res) => {
-  burgers.all((data) => {
-    const hbsObject = {
-      burgers: data,
-    };
 
-    res.render("indexBR", hbsObject);
-  });
-});
 
-router.post("/api/burgers", async (req, res) => {
+router.post("/api/burgersbr", async (req, res) => {
   const foo = await translate(req.body.name, {
-    to: "pt" || "en",
+    to:"en",
     engine: "google",
     key: process.env.KEY,
   });
   console.log(foo);
-  burgers.create(
+  burgersbr.create(
     ["burger_name", "devoured"],
     [req.body.name, req.body.devoured],
     (result) => {
@@ -42,12 +33,12 @@ router.post("/api/burgers", async (req, res) => {
   );
 });
 
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burgersbr/:id", (req, res) => {
   const condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
-  burgers.update(
+  burgersbr.update(
     {
       devoured: req.body.devoured,
     },
@@ -62,10 +53,10 @@ router.put("/api/burgers/:id", (req, res) => {
   );
 });
 
-router.delete("/api/burgers/:id", (req, res) => {
+router.delete("/api/burgersbr/:id", (req, res) => {
   const condition = "id = " + req.params.id;
 
-  burgers.delete(condition, (result) => {
+  burgersbr.delete(condition, (result) => {
     if (result.affectedRows == 0) {
       return res.status(404).end();
     } else {
