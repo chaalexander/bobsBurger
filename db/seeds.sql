@@ -1,3 +1,4 @@
+-- us table
 INSERT INTO burgers (burger_name) VALUES ('The Fuh-gouda-bout-it Burger');
 INSERT INTO burgers (burger_name) VALUES ('Little Chop of Horseradish Burger');
 INSERT INTO burgers (burger_name, devoured ) VALUES ('My Bloody Kale-entine Burger', true);
@@ -17,3 +18,11 @@ INSERT INTO burgers (burger_name, devoured) VALUES ('The Cops and Rabe-ers Burge
 INSERT INTO burgers (burger_name, devoured) VALUES ('Take Me Out To The Burger', true);
 
 
+-- br table
+
+INSERT INTO burgersbr (burger_name) VALUES ('X-salada');
+INSERT INTO burgersbr (burger_name) VALUES ('X-tudo');
+INSERT INTO burgersbr (burger_name, devoured ) VALUES ('Misto Quente', true);
+INSERT INTO burgersbr (burger_name, devoured) VALUES ('Bauru completo', true);
+INSERT INTO burgersbr (burger_name, devoured) VALUES ('Mc Chedar', true);
+INSERT INTO burgersbr (burger_name) VALUES ('Mc nifico');
