@@ -27,12 +27,12 @@ router.get("/indexBR", (req, res) => {
 });
 
 router.post("/api/burgers", async (req, res) => {
-  const foo = await translate(req.body.name, {
-    to: "pt",
-    engine: "google",
-    key: process.env.KEY,
-  });
-  console.log(foo);
+  // const foo = await translate(req.body.name, {
+  //   to: "pt",
+  //   engine: "google",
+  //   key: process.env.KEY,
+  // });
+  // console.log(foo);
   burgers.create(
     ["burger_name", "devoured"],
     [req.body.name, req.body.devoured],
