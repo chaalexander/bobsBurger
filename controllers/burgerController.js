@@ -15,7 +15,16 @@ router.get("/", (req, res) => {
   });
 });
 
+// router for the portuguese page
+router.get("/indexBR", (req, res) => {
+  burgers.all((data) => {
+    const hbsObject = {
+      burgers: data,
+    };
 
+    res.render("indexBR", hbsObject);
+  });
+});
 
 router.post("/api/burgers", async (req, res) => {
   const foo = await translate(req.body.name, {
