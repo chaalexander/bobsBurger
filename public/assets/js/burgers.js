@@ -31,8 +31,12 @@ $(function () {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
-    }).then(function () {
+    }).then(function (res, err) {
       console.log("add new burger");
+
+      console.log(res);
+      console.log(err);
+
       location.reload();
     });
   });
