@@ -1,13 +1,13 @@
-const express = require("express");
+var express = require("express");
 
-const router = express.Router();
+var router = express.Router();
 
-const burgers = require("../models/burgers.js");
+var burgers = require("../models/burgers.js");
 
-router.get("/", (req, res) => {
-  burgers.all((data) => {
-    const englishBurgers = data.filter((burger) => burger.language === "en");
-    const hbsObject = {
+router.get("/", function (req, res) {
+  burgers.all(function (data) {
+    var englishBurgers = data.filter((burger) => burger.language === "en");
+    var hbsObject = {
       burgers: englishBurgers,
     };
 
@@ -16,10 +16,10 @@ router.get("/", (req, res) => {
 });
 
 // router for the portuguese page
-router.get("/indexBR", (req, res) => {
-  burgers.all((data) => {
-    const portuguseBurgers = data.filter((burger) => burger.language === "pt");
-    const hbsObject = {
+router.get("/indexBR", function (req, res) {
+  burgers.all(function (data) {
+    var portuguseBurgers = data.filter((burger) => burger.language === "pt");
+    var hbsObject = {
       burgers: portuguseBurgers,
     };
 
@@ -27,18 +27,18 @@ router.get("/indexBR", (req, res) => {
   });
 });
 
-router.post("/api/burgers", (req, res) => {
+router.post("/api/burgers", function (req, res) {
   burgers.create(
     ["burger_name", "devoured", "language"],
     [req.body.name, req.body.devoured, req.body.language],
-    (result) => {
+    function (result) {
       res.json({ id: result.insertId });
     }
   );
 });
 
-router.put("/api/burgers/:id", (req, res) => {
-  const condition = "id = " + req.params.id;
+router.put("/api/burgers/:id", function (req, res) {
+  var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
@@ -47,7 +47,7 @@ router.put("/api/burgers/:id", (req, res) => {
       devoured: req.body.devoured,
     },
     condition,
-    (result) => {
+    function (result) {
       if (result.changedRows == 0) {
         return res.status(404).end();
       } else {
@@ -57,8 +57,8 @@ router.put("/api/burgers/:id", (req, res) => {
   );
 });
 
-router.delete("/api/burgers/:id", (req, res) => {
-  const condition = "id = " + req.params.id;
+router.delete("/api/burgers/:id", function (req, res) {
+  var condition = "id = " + req.params.id;
 
   burgers.delete(condition, (result) => {
     if (result.affectedRows == 0) {

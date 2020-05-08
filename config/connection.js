@@ -1,6 +1,6 @@
-const mysql = require("mysql");
+var mysql = require("mysql");
 
-const connection = mysql.createConnection(
+var connection = mysql.createConnection(
   process.env.JAWSDB_URL || {
     host: "localhost",
     port: 3306,
@@ -10,7 +10,7 @@ const connection = mysql.createConnection(
   }
 );
 
-connection.connect((err) => {
+connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;

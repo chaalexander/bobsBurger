@@ -1,4 +1,4 @@
-$(() => {
+$(function () {
   if (location.pathname === "/") {
     $("body").attr("style", `background-image: url("/assets/image/test.jpeg")`);
   } else {
@@ -8,23 +8,23 @@ $(() => {
     );
   }
 
-  $(".change-devoured").on("click", (event) => {
-    const id = $(this).data("id");
-    const newDevoured = $(this).data("newdevoured");
-    const newDevouredState = {
+  $(".change-devoured").on("click", function (event) {
+    var id = $(this).data("id");
+    var newDevoured = $(this).data("newdevoured");
+    var newDevouredState = {
       devoured: newDevoured,
     };
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState,
-    }).then(() => {
+    }).then(function () {
       location.reload();
     });
   });
 
-  $(".create-form").on("submit", (e) => {
+  $(".create-form").on("submit", function (e) {
     e.preventDefault();
-    const newBurger = {
+    var newBurger = {
       name: $("#ca").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim(),
     };
@@ -38,27 +38,27 @@ $(() => {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger,
-    }).then(() => {
+    }).then(function () {
       location.reload();
     });
   });
 
-  $(".delete-burger").on("click", (e) => {
-    const id = $(this).data("id");
+  $(".delete-burger").on("click", function (e) {
+    var id = $(this).data("id");
     $.ajax("/api/burgers/" + id, {
       type: "DELETE",
-    }).then(() => {
+    }).then(function () {
       location.reload();
     });
   });
 
   // click handle to send the page to portuguese
-  $("#br").on("click", () => {
+  $("#br").on("click", function () {
     location.replace("/indexBR");
   });
 
   // click handle to go back to english
-  $("#us").on("click", () => {
+  $("#us").on("click", function () {
     location.replace("/");
   });
 });
