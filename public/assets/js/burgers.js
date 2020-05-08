@@ -36,6 +36,12 @@ $(function () {
       name: $("#ca").val().trim(),
       devoured: $("[name=devoured]:checked").val().trim(),
     };
+    console.log(location.pathname);
+    if (location.pathname === "/indexBR") {
+      newBurger.language = "pt";
+    } else {
+      newBurger.language = "en";
+    }
 
     $.ajax("/api/burgers", {
       type: "POST",

@@ -6,8 +6,9 @@ const burgers = require("../models/burgers.js");
 
 router.get("/", (req, res) => {
   burgers.all((data) => {
+    const englishBurgers = data.filter((burger) => burger.language === "en");
     const hbsObject = {
-      burgers: data,
+      burgers: englishBurgers,
     };
 
     res.render("index", hbsObject);
@@ -17,8 +18,9 @@ router.get("/", (req, res) => {
 // router for the portuguese page
 router.get("/indexBR", (req, res) => {
   burgers.all((data) => {
+    const portuguseBurgers = data.filter((burger) => burger.language === "pt");
     const hbsObject = {
-      burgers: data,
+      burgers: portuguseBurgers,
     };
 
     res.render("indexBR", hbsObject);
@@ -27,8 +29,8 @@ router.get("/indexBR", (req, res) => {
 
 router.post("/api/burgers", async (req, res) => {
   burgers.create(
-    ["burger_name", "devoured"],
-    [req.body.name, req.body.devoured],
+    ["burger_name", "devoured", "language"],
+    [req.body.name, req.body.devoured, req.body.language],
     (result) => {
       res.json({ id: result.insertId });
     }
