@@ -10,8 +10,8 @@ INSERT INTO burgers (burger_name, devoured ) VALUES ('The Dont Dream Its Okra Bu
 INSERT INTO burgers (burger_name, devoured) VALUES ('The Stop or My Mom Will Shoots Burger', true);
 INSERT INTO burgers (burger_name, devoured) VALUES ('Two Karat Burger', true);
 INSERT INTO burgers (burger_name) VALUES ('Say it Aint Cilantro Burger');
-INSERT INTO burgers (burger_name) VALUES ('Pao com ovo');
-INSERT INTO burgers (burger_name) VALUES ('Misto Quente');
-INSERT INTO burgers (burger_name, devoured ) VALUES ('X-Salada', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('X-Tudo', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('X-Infarto', true);
+INSERT INTO burgers (burger_name, language) VALUES ('Pao com ovo', "pt");
+INSERT INTO burgers (burger_name, language) VALUES ('Misto Quente', "pt");
+INSERT INTO burgers (burger_name, language ) VALUES ('X-Salada', "pt");
+INSERT INTO burgers (burger_name, devoured, language) VALUES ('X-Tudo', true, "pt");
+INSERT INTO burgers (burger_name, devoured , language) VALUES ('X-Infarto', true, "pt");
