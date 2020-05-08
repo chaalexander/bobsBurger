@@ -27,7 +27,7 @@ router.get("/indexBR", (req, res) => {
   });
 });
 
-router.post("/api/burgers", async (req, res) => {
+router.post("/api/burgers", (req, res) => {
   burgers.create(
     ["burger_name", "devoured", "language"],
     [req.body.name, req.body.devoured, req.body.language],

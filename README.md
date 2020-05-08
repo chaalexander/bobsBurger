@@ -19,16 +19,17 @@
 <ul>
 <li>Node.js</li>
 <li>JavaScript</li>
-<li>MySQL</li>
+<li>SQL</li>
 </ul>          
 <h2 id="usage"> Usage </h2>
 <ol>
-<li>Choose your page. Brazilian-Portuguese or English.</li>
+<li>Choose a version. Brazilian-Portuguese or English.</li>
 <li>Add a new burger.</li>
-<li>Check if you want to leave on the want to eat side or ate side.</li>
-<li>Whenever you eat the burger, sent it to the ate side, and vice-versa</li>
+<li>Check if you want to eat or devoured.</li>
+<li>Whenever you eat the burger, sent it to the devoured side, and vice-versa</li>
 <li>Delete whatever burger you don't need anymore</li>
 </ol>   
+<p>The burger saved will always show only on the version that the user are. Ex: If the user saved a burger on the Portuguese version will only show on there. The same for the English version.</p>
 <h2 id="screen"> ScreenShoots </h2>
 <h4> Desktop </h4>
 <img src= "public/assets/image/screeen-shots/dkt-en.png">

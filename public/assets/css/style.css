@@ -14,11 +14,13 @@ html {
   background-repeat: no-repeat;
 }
 
+/* title of the page */
 .name {
   margin-top: 20px;
   width: 40rem;
 }
 
+/* every single btn */
 .btn {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -29,15 +31,12 @@ html {
   background-color: #fec;
 }
 
-.del {
-  width: 10px;
-  height: 10px;
-}
-.icon {
+.addburgericon {
   height: 2.5rem;
   width: 3rem;
 }
-.add {
+
+p {
   font-weight: bolder;
   font-size: 0.7rem;
 }
