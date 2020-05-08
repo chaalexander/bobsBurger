@@ -1,4 +1,13 @@
 $(function () {
+  if (location.pathname === "/") {
+    $("body").attr("style", `background-image: url("/assets/image/test.jpeg")`);
+  } else {
+    $("body").attr(
+      "style",
+      `background-image: url("/assets/image/EXTERIOR.jpg")`
+    );
+  }
+
   $(".change-devoured").on("click", function (event) {
     console.log("you click me");
     var id = $(this).data("id");
@@ -57,13 +66,10 @@ $(function () {
   // click handle to send the page to portuguese
   $("#br").on("click", function () {
     location.replace("/indexBR");
-    console.log("you click me");
   });
 
   // click handle to go back to the english page
   $("#us").on("click", function () {
     location.replace("/");
-
-    console.log("you click me");
   });
 });
