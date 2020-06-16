@@ -3,8 +3,6 @@ const express = require("express");
 
 const CFonts = require("cfonts");
 
-const compression = require("compression");
-
 const PORT = process.env.PORT || 7000;
 
 const app = express();
@@ -13,8 +11,6 @@ app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-app.use(compression());
 
 const exphbs = require("express-handlebars");
 
